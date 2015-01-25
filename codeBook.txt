@@ -1,0 +1,26 @@
+This project analyzes the set described in the Readme.md file.
+
+The stored information on that data describes the data as follows:
+
+=================
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+================
+
+For each signal described above, the stored database included mean & std of the signals as well as numerous other variables describing the distribution.
+
+This tidy dataset only uses the mean and std of each signal.  The mean of the mean and std are calculated for each unique subject/activity in the dataset.
+
+The tidy dataset has 4 initial columns:
+(1) "set" - describes whether the data was allocated to the "test" dataset or the "training" data set.
+(2) "subject" - is a unique numeric id 1-30 for all the subjects on which we have data.
+(3 & 4) "classlabel"/"activity" - describe the activity during the measurements.  This is one of: "WALKING","WALKING UPSTAIRS","WALKING DOWNSTAIRS","SITTING","STANDING","LAYING"
+(remaining columns) - mean of mean or mean of std for all the measurement for each unique subject/activity
