@@ -1,4 +1,3 @@
-setwd("/Users/darylm/Dropbox/DesktopBackup/HVTN_Labs/CourseraC1/code")
 
 download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip",
                "../data/project.zip", method = "curl")
